@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <button onclick="run()">Run</button>
+  <pre id="out"></pre>
+
+<script>
+function run() {
+  const out = document.getElementById("out");
+  out.innerHTML = "";
+  fetch("/run").then(r => r.text()).then(t => out.innerHTML = t);
+}
+</script>
+</body>
+</html>

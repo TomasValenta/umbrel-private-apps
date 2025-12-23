@@ -1,0 +1,6 @@
+id: backup
+name: Backup
+version: "1.0.0"
+category: Utilities
+description: Záloha Umbrel dat na externí disk
+port: 5000
