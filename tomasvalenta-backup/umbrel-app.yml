@@ -2,7 +2,7 @@ manifestVersion: 1
 id: tomasvalenta-backup
 name: Backup
 tagline: Local Umbrel backup
-icon: https://svgur.com/i/mvA.svg
+icon: https://i.imgur.com/m746aYH.png
 category: Utilities
 version: "1.0.0"
 port: 5000
