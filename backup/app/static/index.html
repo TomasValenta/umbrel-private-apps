@@ -1,14 +1,40 @@
 <!DOCTYPE html>
 <html>
 <body>
-  <button onclick="run()">Run</button>
+  <div id="status">Kontroluji konfiguraci…</div>
+  <button id="run" onclick="run()" disabled>Run backup</button>
   <pre id="out"></pre>
 
 <script>
+const status = document.getElementById("status");
+const runBtn = document.getElementById("run");
+
+fetch("/check")
+  .then(r => r.json())
+  .then(r => {
+    if (r.ok) {
+      status.innerText = "✅ Konfigurace OK";
+      runBtn.disabled = false;
+    } else {
+      status.innerHTML = `
+❌ Backup disk nelze připojit.
+
+Je potřeba po aktualizaci Umbrel OS znovu přidat do /etc/fstab:
+
+UUID=…  /media/backup  ext4  noauto,user  0  0
+
+Poté spusť:
+sudo systemctl daemon-reload
+      `;
+    }
+  });
+
 function run() {
   const out = document.getElementById("out");
   out.innerHTML = "";
-  fetch("/run").then(r => r.text()).then(t => out.innerHTML = t);
+  fetch("/run")
+    .then(r => r.text())
+    .then(t => out.innerHTML = t);
 }
 </script>
 </body>

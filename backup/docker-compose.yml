@@ -8,5 +8,5 @@ services:
     working_dir: /app
     volumes:
       - ./app:/app
-      - /umbrel/scripts:/host-scripts:ro
+      - ./scripts:/scripts:ro
     command: python server.py

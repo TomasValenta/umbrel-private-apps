@@ -7,11 +7,36 @@ app = Flask(__name__, static_folder="static")
 def index():
     return send_from_directory("static", "index.html")
 
+@app.route("/check")
+def check():
+    try:
+        # zkus mount
+        subprocess.check_call(
+            ["mount", "/media/backup"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+
+        # hned zase umount
+        subprocess.check_call(
+            ["umount", "/media/backup"],
+            stdout=subprocess.DEVNULL,
+            stderr=subprocess.DEVNULL,
+        )
+
+        return {"ok": True}
+
+    except subprocess.CalledProcessError:
+        return {
+            "ok": False,
+            "error": "Mount /media/backup selhal – pravděpodobně chybí fstab konfigurace"
+        }
+
 @app.route("/run")
 def run():
     def stream():
         process = subprocess.Popen(
-            ["sudo", "/host-scripts/backup.sh"],
+            ["/scripts/backup.sh"],
             stdout=subprocess.PIPE,
             stderr=subprocess.STDOUT,
             text=True
