@@ -1,0 +1,25 @@
+manifestVersion: 1
+id: tomasvalenta-backup
+name: Backup
+tagline: Local Umbrel backup
+icon: https://svgur.com/i/mvA.svg
+category: Utilities
+version: "1.0.0"
+port: 5000
+description: Backup Umbrel data to an external drive with rsync
+developer: TomasValenta
+website: https://github.com/TomasValenta
+submitter: Umbrel
+submission: https://github.com/TomasValenta/umbrel-private-apps/
+repo: https://github.com/TomasValenta/umbrel-private-apps/
+support: https://github.com/TomasValenta/umbrel-private-apps/issues
+gallery:
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://i.imgur.com/yyVG0Jb.jpeg
+releaseNotes: >-
+  Initial release.
+dependencies: []
+path: ""
+defaultUsername: ""
+defaultPassword: ""

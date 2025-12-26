@@ -1,8 +1,0 @@
-manifestVersion: 1
-id: backup
-name: Backup
-version: "1.0.0"
-tagline: Local Umbrel backup
-category: Utilities
-description: Backup Umbrel data to an external drive
-port: 5000
