@@ -2,7 +2,7 @@ manifestVersion: 1
 id: tomasvalenta-backup
 name: Backup
 tagline: Local Umbrel backup
-icon: https://i.imgur.com/m746aYH.png
+icon: https://raw.githubusercontent.com/TomasValenta/umbrel-private-apps/refs/heads/main/tomasvalenta-backup/store/icon.png
 category: Utilities
 version: "1.0.1"
 port: 5000
@@ -14,9 +14,9 @@ submission: https://github.com/TomasValenta/umbrel-private-apps/
 repo: https://github.com/TomasValenta/umbrel-private-apps/
 support: https://github.com/TomasValenta/umbrel-private-apps/issues
 gallery:
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
-  - https://i.imgur.com/yyVG0Jb.jpeg
+  - https://raw.githubusercontent.com/TomasValenta/umbrel-private-apps/refs/heads/main/tomasvalenta-backup/store/screenshot_1.jpeg
+  - https://raw.githubusercontent.com/TomasValenta/umbrel-private-apps/refs/heads/main/tomasvalenta-backup/store/screenshot_1.jpeg
+  - https://raw.githubusercontent.com/TomasValenta/umbrel-private-apps/refs/heads/main/tomasvalenta-backup/store/screenshot_1.jpeg
 releaseNotes: >-
   Initial release.
 dependencies: []
