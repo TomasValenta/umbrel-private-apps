@@ -4,7 +4,7 @@ name: Backup
 tagline: Local Umbrel backup
 icon: https://i.imgur.com/m746aYH.png
 category: Utilities
-version: "1.0.0"
+version: "1.0.1"
 port: 5000
 description: Backup Umbrel data to an external drive with rsync
 developer: TomasValenta
