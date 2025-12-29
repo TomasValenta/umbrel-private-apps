@@ -2,11 +2,12 @@ version: "3.7"
 
 services:
   app:
-    image: python:3.12-slim
+    build: .
     container_name: tomasvalenta-backup
     user: "1000:1000"
     working_dir: /app
     volumes:
       - ${APP_DATA_DIR}/app:/app
       - ${APP_DATA_DIR}/scripts:/scripts:ro
-    command: python server.py
+    ports:
+      - "5000"
