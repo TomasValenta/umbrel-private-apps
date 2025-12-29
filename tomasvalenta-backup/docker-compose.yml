@@ -1,18 +1,10 @@
 version: "3.7"
 
 services:
-  app_proxy:
-    environment:
-      APP_HOST: tomasvalenta-backup-server
-      APP_PORT: 8080
-    image: ghcr.io/getumbrel/umbrel-app-proxy:latest
-    pull_policy: always
-    
   server:
     image: tomasvalenta/umbrel-backup:latest
     restart: on-failure
     stop_grace_period: 1m
-    pull_policy: always
     volumes:
       - ${APP_DATA_DIR}/data:/data
       - ${APP_DATA_DIR}/../:/umbrel-apps
