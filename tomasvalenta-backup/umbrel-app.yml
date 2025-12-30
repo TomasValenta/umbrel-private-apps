@@ -4,7 +4,7 @@ name: Backup
 tagline: Local Umbrel backup
 icon: https://raw.githubusercontent.com/TomasValenta/umbrel-private-apps/refs/heads/main/tomasvalenta-backup/images/icon.png
 category: Utilities
-version: "1.0.6"
+version: "1.0.7"
 port: 5000
 description: Backup Umbrel data to an external drive with rsync
 developer: TomasValenta

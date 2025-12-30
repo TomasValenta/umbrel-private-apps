@@ -1,7 +1,7 @@
 #!/bin/bash
 
 MOUNT_POINT="/media/backup"
-UMBREL_DIR="/home/umbrel/umbrel"
+UMBREL_DIR="/umbrel-root"
 SLEEP=2
 
 log() {
