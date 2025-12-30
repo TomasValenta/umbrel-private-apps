@@ -5,6 +5,8 @@ services:
     image: cz840311/umbrel-backup:latest
     restart: on-failure
     stop_grace_period: 1m
+    ports:
+      - "${APP_PORT}:5000"
     volumes:
       - ${APP_DATA_DIR}/data:/data
       - ${APP_DATA_DIR}/../:/umbrel-root
