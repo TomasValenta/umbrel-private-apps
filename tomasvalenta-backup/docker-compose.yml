@@ -2,7 +2,7 @@ version: "3.7"
 
 services:
   server:
-    build: .
+    image: cz840311/umbrel-backup:latest
     restart: on-failure
     stop_grace_period: 1m
     volumes:
