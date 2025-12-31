@@ -1,6 +1,12 @@
 version: "3.7"
 
 services:
+
+  app_proxy:
+    environment:
+      APP_HOST: tomasvalenta-backup_server_1
+      APP_PORT: 5000
+
   server:
     image: cz840311/umbrel-backup:latest
     restart: on-failure
